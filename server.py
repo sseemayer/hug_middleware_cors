@@ -1,5 +1,4 @@
 import hug
-
 from hug_middleware_cors import CORSMiddleware
 
 api = hug.API(__name__)
