@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>CORS test</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+	</head>
+	<body>
+		<div><label for="name">Name:</label><input id="name"></div>
+		<button id="request">Request</button>
+
+		<script>
+			$(document).ready(function(){
+				$('#request').click(function(){
+					var name = $('#name').val();
+
+					$.ajax({
+						type: 'POST',
+						url: 'http://localhost:8000/demo',
+						data: JSON.stringify({
+							'name': name,
+						}),
+						contentType: 'application/json',
+						success: function(data) {
+							alert(data.result);
+						},
+						error: function(xhr, type) {
+							alert('error!');
+						}
+					});
+				});
+			});
+		</script>
+	</body>
