@@ -16,6 +16,13 @@ def demo(name: 'your name'):
     return {"result": "Hello {0}".format(name)}
 ```
 
+## Demoing
+
+  1. Check out this repository and navigate to its root
+  2. Start a hug server on port 8000 using: `hug -f server.py`
+  3. Start a static http server on port 8080 using `python -m http.server 8080`
+  4. Go to [http://localhost:8080](http://localhost:8080) to send a preflighted CORS request to the hug server.
+
 ## Installation
 TODO: create a nice way of installing this.
 
