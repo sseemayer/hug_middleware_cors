@@ -2,6 +2,12 @@
 
 A [hug](https://github.com/timothycrosley/hug) middleware for allowing CORS (cross-origin resource sharing) requests from hug servers.
 
+## Installation
+
+```bash
+pip install hug_middleware_cors
+```
+
 ## Usage
 
 ```python
@@ -22,9 +28,6 @@ def demo(name: 'your name'):
   2. Start a hug server on port 8000 using: `hug -f server.py`
   3. Start a static http server on port 8080 using `python -m http.server 8080`
   4. Go to [http://localhost:8080](http://localhost:8080) to send a preflighted CORS request to the hug server.
-
-## Installation
-TODO: create a nice way of installing this.
 
 ## License
 MIT License
